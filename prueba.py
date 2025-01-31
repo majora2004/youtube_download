@@ -26,4 +26,7 @@ def get_radio():
 button = tk.Button(root, text="Obtener descarga", command=get_radio)
 button.pack()
 # Iniciar el bucle principal de la aplicación
+
+label=tk.Label(root, text="introduzca el link de la plylist")
+label.pack()  # Agrega la etiqueta a la ventana
 root.mainloop()
