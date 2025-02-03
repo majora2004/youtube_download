@@ -3,7 +3,7 @@ import yt_dlp
 
 # Crear la ventana principal
 root = tk.Tk()
-root.title("Mi Primera App")  # Título de la ventana
+root.title("youtube download tool")  # Título de la ventana
 root.geometry("400x300")      # Tamaño de la ventana (ancho x alto)
 
 #las funciones del programa aqui
@@ -15,8 +15,26 @@ def ejecutar():
         funcion2()
 
 def funcion1():
+    playlist_url  = entrada.get()
+     # Opciones para descargar videos en la mejor calidad disponible
+    ydl_opts = {
+        'format': 'bestvideo+bestaudio/best',  # Video y audio en la mejor calidad
+        'outtmpl': 'descargas/%(playlist)s/%(title)s.%(ext)s',  # Guarda en carpeta con nombre de la playlist
+        'merge_output_format': 'mp4',  # Fuerza MP4 para mejor compatibilidad
+        'ignoreerrors': True,  # Ignorar errores y continuar con la descarga
+        'noplaylist': False,  # Asegurar que descargue toda la playlist
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([playlist_url])
+
+    print("¡Descarga de la playlist completada!")
+    
+    
+
+def funcion2():
     playlist_url = entrada.get()
-    print("boton1")
+    print("boton2")
       # Opciones para descargar solo el audio en MP3
     ydl_opts = {
         'format': 'bestaudio/best',  # Mejor calidad de audio disponible
@@ -34,12 +52,6 @@ def funcion1():
         ydl.download([playlist_url])
 
     print("¡Descarga de la playlist completada!")
-
-def funcion2():
-    texto = entrada.get()
-    print(texto)
-    print("boton2")
-
 
 
 # Aquí agregarás widgets (botones, etiquetas, etc.)
@@ -68,6 +80,8 @@ entrada.pack()
 button = tk.Button(root, text="Obtener descarga", command=ejecutar)
 button.pack()
 # Iniciar el bucle principal de la aplicación
+text_box = tk.Text(root, height=10, width=50)
+text_box.pack(padx=10, pady=10)
 
 
 root.mainloop()
