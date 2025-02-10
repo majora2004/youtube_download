@@ -80,8 +80,8 @@ entrada.pack()
 button = tk.Button(root, text="Obtener descarga", command=ejecutar)
 button.pack()
 # Iniciar el bucle principal de la aplicación
-text_box = tk.Text(root, height=10, width=50)
-text_box.pack(padx=10, pady=10)
+#text_box = tk.Text(root, height=10, width=50)
+#text_box.pack(padx=10, pady=10)
 
 
 root.mainloop()
