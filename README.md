@@ -47,7 +47,7 @@ Además, asegúrese de que `ffmpeg` esté instalado en su sistema. Puede instala
 - Manejo de errores para evitar interrupciones durante la descarga.
 
 ## Versión con Interfaz Gráfica (GUI)
-Actualmente, se encuentra en desarrollo una versión con interfaz gráfica en fase alfa. Esta versión permitirá una experiencia más amigable para los usuarios que prefieran una interacción visual en lugar de la línea de comandos.
+Actualmente, se encuentra en desarrollo una versión con interfaz gráfica en fase alfa. Esta versión permitirá una experiencia más amigable para los usuarios que prefieran una interacción visual en lugar de la línea de comandos.(para ver el codigo fuente cambiar a la rama GUI_Tkinter)
 
 ## Información del Autor
 - **Autor:** Majora2004
